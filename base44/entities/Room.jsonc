@@ -1,0 +1,70 @@
+{
+  "name": "Room",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "title": "Room Code"
+    },
+    "name": {
+      "type": "string",
+      "title": "Room Name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "countdown",
+        "playing",
+        "rankings",
+        "results",
+        "closed"
+      ],
+      "default": "waiting",
+      "title": "Status"
+    },
+    "host_kiosk_id": {
+      "type": "string",
+      "title": "Host Kiosk ID"
+    },
+    "question_count": {
+      "type": "number",
+      "title": "Question Count"
+    },
+    "time_per_question": {
+      "type": "number",
+      "title": "Time Per Question"
+    },
+    "question_data": {
+      "type": "string",
+      "title": "Question Data (JSON)"
+    },
+    "current_question_index": {
+      "type": "number",
+      "default": 0,
+      "title": "Current Question Index"
+    },
+    "countdown_starts_at": {
+      "type": "string",
+      "title": "Countdown Starts At"
+    },
+    "question_started_at": {
+      "type": "string",
+      "title": "Question Started At"
+    },
+    "locked": {
+      "type": "boolean",
+      "default": false,
+      "title": "Locked"
+    },
+    "last_activity": {
+      "type": "string",
+      "title": "Last Activity"
+    }
+  },
+  "required": [
+    "code",
+    "name",
+    "status"
+  ]
+}

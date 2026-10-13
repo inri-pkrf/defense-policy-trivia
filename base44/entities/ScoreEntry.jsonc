@@ -1,0 +1,37 @@
+{
+  "name": "ScoreEntry",
+  "type": "object",
+  "properties": {
+    "player_name": {
+      "type": "string",
+      "title": "Player Name"
+    },
+    "score": {
+      "type": "number",
+      "title": "Score"
+    },
+    "correct_count": {
+      "type": "number",
+      "title": "Correct Count"
+    },
+    "total": {
+      "type": "number",
+      "title": "Total Questions"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "single",
+        "team"
+      ],
+      "default": "single",
+      "title": "Game Mode"
+    }
+  },
+  "required": [
+    "player_name",
+    "score",
+    "correct_count",
+    "total"
+  ]
+}
